@@ -7,7 +7,7 @@ public class Student {
     private String lname;
     private int gradeYear;
     private String studentId;
-    private String courses;
+    private String courses = null;
     private int tuitionBalance;
     private int costOfCourse = 600;
     private static int id = 1000;
@@ -32,13 +32,18 @@ public class Student {
     }
     //Enrolling in courses
     public void enroll(){
-        System.out.println("Enter course to enroll (0 to quit): ");
-        Scanner in = new Scanner(System.in);
-        String course = in.nextLine();
-        if (course != "Q") {
-            courses = courses + "\n" + course;
-            tuitionBalance = tuitionBalance + costOfCourse;
-        }
+        do{
+            System.out.print("Enter course to enroll (0 to quit): ");
+            Scanner in = new Scanner(System.in);
+            String course = in.nextLine();
+            if (!course.equals("Q")) {
+                courses = courses + "\n" + course;
+                tuitionBalance = tuitionBalance + costOfCourse;
+            } else {
+                break;
+            }
+        } while ( 1 != 0);
+
         System.out.println("Enrolled in: " + courses);
         System.out.println("Tuition balance: " + tuitionBalance);
     }
