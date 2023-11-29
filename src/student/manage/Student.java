@@ -17,7 +17,7 @@ public class Student {
         this.fname = in.nextLine();
         System.out.println("Enter student last name: ");
         this.lname = in.nextLine();
-        System.out.println("1 - Firstname\n2 - Sophmore\n3 - Junior\n4 - Senior\nEnter student class level: ");
+        System.out.println("1 - Firstname\n2 - Sophmore\n3 - Junior\n4 - Senior\nEnter student class year: ");
         this.gradeYear = in.nextInt();
 
         setStudentID();
